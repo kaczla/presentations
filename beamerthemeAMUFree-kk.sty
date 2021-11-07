@@ -1,0 +1,189 @@
+% The beamer presentation theme coped from Adam Mickiewicz University theme
+
+% -------------------------------------------------------------------------
+% Defining the preamle
+
+\mode<presentation>
+
+\usepackage{pgfcomp-version-0-65}
+\usepackage{xcolor}
+\usepackage{helvet}
+\usepackage[absolute,overlay]{textpos}
+
+% -------------------------------------------------------------------------
+% Inner theme
+
+\useinnertheme{rectangles}
+\setbeamertemplate{itemize items}[default]
+\setbeamertemplate{blocks}[default]
+
+% -------------------------------------------------------------------------
+% Colors
+
+\definecolor{psiBaseColor}{rgb}{0,0,0}
+
+\definecolor{wmiRed}{RGB}{228,38,24}
+\colorlet{wmiRed100}{wmiRed}
+\colorlet{wmiRed75} {wmiRed!75!white}
+\colorlet{wmiRed50} {wmiRed!50!white}
+\colorlet{wmiRed25} {wmiRed!25!white}
+\colorlet{wmiRed10} {wmiRed!10!white}
+\colorlet{wmiRed5}  {wmiRed!5!white}
+
+\definecolor{uamBlue}{RGB}{10,31,98}
+\colorlet{uamBlue100}{uamBlue}
+\colorlet{uamBlue75} {uamBlue!75!white}
+\colorlet{uamBlue50} {uamBlue!50!white}
+\colorlet{uamBlue25} {uamBlue!25!white}
+\colorlet{uamBlue10} {uamBlue!10!white}
+\colorlet{uamBlue5}  {uamBlue!5!white}
+
+\definecolor{uamGray}{RGB}{194,194,194}
+
+\setbeamercolor{title}{fg=uamBlue}
+\setbeamercolor{subtitle}{fg=uamBlue}
+\setbeamercolor{author}{fg=uamBlue}
+\setbeamercolor{date}{fg=uamBlue}
+
+\setbeamercolor{structure}{fg=uamBlue}
+\setbeamercolor{frametitle}{fg=uamBlue}
+\setbeamercolor{normal text}{fg=uamBlue}
+
+\setbeamercolor{item}{fg=uamBlue}
+\setbeamercolor{subitem}{fg=uamBlue}
+\setbeamercolor{subsubitem}{fg=uamBlue}
+\setbeamercolor{description item}{fg=uamBlue}
+
+\setbeamercolor{alerted text}{fg=wmiRed}
+\setbeamercolor{example text}{fg=uamGray}
+
+\setbeamercolor{block title}{use=structure,fg=white,bg=uamBlue}
+\setbeamercolor{block title alerted}{use=example text,fg=white,bg=wmiRed}
+\setbeamercolor{block title example}{use=alerted text,fg=black,bg=uamGray}
+\setbeamercolor{block body}{use=block title,fg=uamBlue}
+
+\setbeamercolor{text in foot}{fg=white,bg=uamBlue}
+
+\setbeamercolor{block red box}{fg=white,bg=wmiRED}
+\setbeamercolor{block blue box}{fg=white,bg=uamBlue}
+
+% -------------------------------------------------------------------------
+% Fonts
+
+\usefonttheme{professionalfonts}
+
+\setbeamerfont{title}{size=\Large,shape=\upshape,series=\bfseries}
+\setbeamerfont{subtitle}{size=\normalsize,shape=\upshape,series=\bfseries}
+\setbeamerfont{frametitle}{size=\Large,shape=\upshape}
+\setbeamerfont{author}{size=\normalsize,shape=\upshape}
+\setbeamerfont{date}{size=\normalsize,shape=\upshape}
+
+\setbeamerfont{text in foot}{size=\tiny}
+
+% -------------------------------------------------------------------------
+% Margins
+
+\setbeamersize{text margin left=0.7cm,text margin right=0.7cm}
+
+% -------------------------------------------------------------------------
+% Outer theme
+
+% Title page
+
+\defbeamertemplate*{title page}{PsiUAM}[1][]
+{%
+
+\begin{textblock*}{11.6cm}(0.6cm,0.4cm)%
+    \begin{beamercolorbox}[wd=11.6cm,ht=0.25cm,dp=0.1cm]{block blue box}%
+    \end{beamercolorbox}%
+\end{textblock*}%
+
+\vskip 1.6cm%
+\hskip 3.6cm%
+\begin{beamercolorbox}[wd=11.6cm,center]{uamBlue}%
+    \usebeamerfont{title}\usebeamercolor[fg]{title}\inserttitle\par%
+\end{beamercolorbox}%
+\\
+
+\vskip 0.6cm%
+\hskip 3.6cm%
+\begin{beamercolorbox}[wd=11.6cm,center]{uamBlue}%
+    \usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par%
+\end{beamercolorbox}%
+\\
+
+\ifx\insertauthor\@empty%
+\else%
+    {\vfill%
+    \hskip 3.6cm%
+    \begin{beamercolorbox}[wd=11.6cm,center]{uamBlue}%
+        \usebeamerfont{author}\usebeamercolor[fg]{author}\insertauthor\par%
+        \vskip 0.4cm%
+        Adam Mickiewicz University\\Poznań\\
+        \vskip 0.4cm%
+        Applica.ai\\Warsaw\\
+    \end{beamercolorbox}}%
+\fi%
+
+\ifx\insertdate\@empty%
+\else%
+    {\vfill%
+    \hskip 3.6cm%
+    \begin{beamercolorbox}[wd=11.6cm,center]{uamBlue}%
+        \usebeamerfont{date}\usebeamercolor[fg]{date}\insertdate\par%
+    \end{beamercolorbox}}%
+\fi%
+
+\vskip 1.6cm%
+
+}
+
+
+% Frame title
+
+\defbeamertemplate*{frametitle}{PsiUAM}
+{%
+
+\begin{textblock*}{11.6cm}(0.6cm,1.7cm)%
+    \begin{beamercolorbox}[wd=11.6cm,ht=0.05cm,left]{block blue box}%
+    \end{beamercolorbox}%
+\end{textblock*}%
+
+\vskip0.4cm%
+\begin{beamercolorbox}[wd=11.6cm,ht=1cm,left]{frame title}%
+    {\usebeamerfont{frametitle}\usebeamercolor[fg]{frametitle}\insertframetitle\par}%
+\end{beamercolorbox}%
+\vfil%
+}
+
+% Footer
+
+\setbeamertemplate{navigation symbols}{}
+
+\defbeamertemplate*{footline}{PsiUAM}
+{%
+  \ifnum\thepage=1\relax%
+
+    \begin{textblock*}{11.6cm}(0.6cm,8.9cm)%
+        \begin{beamercolorbox}[wd=11.6cm,ht=0.25cm,dp=0.1cm]{block blue box}%
+        \end{beamercolorbox}%
+    \end{textblock*}%
+
+  \else%
+
+    \begin{textblock*}{10.7cm}(0.6cm,8.9cm)%
+        \begin{beamercolorbox}[wd=10.7cm,ht=0.25cm,dp=0.1cm,left,leftskip=0.2cm]{block blue box}%
+        \end{beamercolorbox}%
+    \end{textblock*}%
+
+    \begin{textblock*}{1.0cm}(11.2cm,8.9cm)%
+        \begin{beamercolorbox}[wd=1.0cm,ht=0.25cm,dp=0.1cm,right,rightskip=0.2cm]{block blue box}%
+            \usebeamerfont{text in foot}\usebeamercolor[fg]{text in foot}\insertframenumber{} / \inserttotalframenumber%
+        \end{beamercolorbox}%
+    \end{textblock*}%
+
+  \fi%
+}
+
+\mode
+<all>

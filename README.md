@@ -1,2 +1,17 @@
-# presentations
-My presentations
+# Presentations
+
+- 2018_08_28
+- 2018_11_04
+- 2019_03_12
+- 2019_11_04
+- 2020_07_07
+- 2021_02_16
+- 2021_02_25
+- 2021_06_10
+- 2021_10_19
+
+# Models
+
+- Transformer
+- BERT
+- GTP 2
