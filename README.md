@@ -1,5 +1,9 @@
 # Presentations
 
+- [2023_03_07](presentation_2023_03_07)
+  - Training MLM models without softmax distribution
+  - Publications:
+    - NPM - [Nonparametric Masked Language Modeling](https://arxiv.org/abs/2212.01349)
 - [2022_03_29](presentation_2022_03_29)
   - We need go ~~deeper~~ bigger
   - Publications:
@@ -134,6 +138,7 @@
 - MobileBERT - [MobileBERT: a Compact Task-Agnostic BERT for Resource-Limited Devices](https://arxiv.org/abs/2004.02984)
 - MPNet - [MPNet: Masked and Permuted Pre-training for Language Understanding](https://arxiv.org/abs/2004.09297)
 - nBRC - [A bio-inspired bistable recurrent cell allows for long-lasting memory](https://arxiv.org/abs/2006.05252)
+- NPM - [Nonparametric Masked Language Modeling](https://arxiv.org/abs/2212.01349)
 - PanGu - [PanGu: Large-scale Autoregressive Pretrained Chinese Language Models with Auto-parallel Computation](https://arxiv.org/abs/2104.12369)
 - PolyCoder - [A Systematic Evaluation of Large Language Models of Code](https://arxiv.org/abs/2202.13169)
 - Prefix-tuning - [Prefix-Tuning: Optimizing Continuous Prompts for Generation](https://arxiv.org/abs/2101.00190)
